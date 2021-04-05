@@ -1,0 +1,7 @@
+{{yield}}
+<tr>
+    <td>{{@user.name}}</td>
+    <td>{{@user.expense}}</td>
+    <td>{{@user.amount}}$</td>
+    <td><button class="button button1" {{on "click" (fn @deleteUser @user.id)}}>Delete</button></td>
+</tr>

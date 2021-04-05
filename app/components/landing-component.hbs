@@ -1,0 +1,33 @@
+{{yield}}
+<div class="landing-wrapper">
+   
+    <form {{on "submit" this.addUser}} class="form-wrapper">
+        <input type="text" oninput={{this.inputHandler}} data-tag = "name" placeholder="Name" value={{this.name}} required/>
+        <input type="text" oninput={{this.inputHandler}} data-tag = "expense" placeholder="Expense Name" value={{this.expense}} required/>
+        <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" oninput={{this.inputHandler}} data-tag = "amount" placeholder="Amount (Only Numbers Allowed!)" value={{this.amount}} required/>
+        <button type="submit" class="button button2">Add User</button>
+    </form>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Expense Name</th>
+            <th>Amount</th>
+            <th></th>
+        </tr>
+        {{#each this.users as |user|}}
+            <UsersTableComponent @user={{user}} @deleteUser ={{this.deleteUser }}/>
+        {{/each}}
+    </table>
+    <div class="footer">
+        {{#if this.users.length}}
+        <button class="button button4" {{on "click" this.tallyUp}}>Tally Up</button>
+        {{/if}}
+        {{#if this.showAmounts}}
+            <label  class="info">Since there are {{usersCount this.users}} people in this party, ane a total of {{getAmountSpent this.users }}, that means each person is supposed to pay {{getTotals this.users}}</label>
+            {{/if}}
+    </div>
+
+      
+    
+    
+</div>
