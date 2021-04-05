@@ -1,8 +1,8 @@
-# third-homework
+# Tally Up
 
-This app will split the amount for each user that paid for something and calculate how much should each user pay
+This is a light version of the Splitwise app. Splitwise is a calculator app that takes in a bunch of shared expenses (dinner, movie, cab…) and names of participants, and spits out how much each participant owes at the end.
 
-<img src = "public/screenshot.png" width="350">
+<img src = "public/screenshot.png" width="400">
 ## Prerequisites
 
 You will need the following things properly installed on your computer.
@@ -14,8 +14,8 @@ You will need the following things properly installed on your computer.
 
 ## Installation
 
-- `git clone <repository-url>` this repository
-- `cd third-homework`
+- `git clone https://github.com/YazanAlmatar99/TallyUp` this repository
+- `cd TallyUp`
 - `npm install`
 
 ## Running / Development
